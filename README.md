@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# Stock Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React-based stock dashboard application that provides an overview of various market indices, sector performance, and detailed charts for the SPDR S&P 500 ETF Trust. The application uses `framer-motion` for animations, `recharts` for charts, and `axios` to fetch market data from the Alpha Vantage API.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Sidebar navigation for different sections (Home, Search, Profile).
+- Display of market summary, sector performance, and market indices in tabular format.
+- Interactive chart for SPDR S&P 500 ETF Trust with different time ranges.
+- Responsive design that adapts to different screen sizes.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To get started with this project, clone the repository and install the necessary dependencies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+git clone <repository_url>
+cd stock-dashboard
+npm install
+```
 
-### `npm test`
+## Running the Application
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the application locally, use the following command:
 
-### `npm run build`
+```bash
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This will start the development server and you can view the application in your browser at `http://localhost:3000`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## API Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This application uses the Alpha Vantage API to fetch market data. You will need to obtain an API key from Alpha Vantage.
 
-### `npm run eject`
+1. Visit [Alpha Vantage](https://www.alphavantage.co/support/#api-key) to get your free API key.
+2. Create a `.env` file in the root directory of the project and add your API key:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+REACT_APP_ALPHA_VANTAGE_API_KEY=your_api_key_here
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The project is structured as follows:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+src/
+├── components/
+│   ├── Header.js
+│   ├── MarketsTable.js
+│   ├── MarketSummary.js
+│   ├── SectorPerformance.js
+│   ├── Sidebar.js
+│   └── SPDRChart.js
+├── pages/
+│   └── Dashboard.js
+├── utils/
+│   └── api.js
+└── App.js
+```
 
-## Learn More
+### Components
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `Header.js`: Displays the header with a welcome message and navigation buttons.
+- `MarketsTable.js`: Displays a table of various market indices with their values and changes.
+- `MarketSummary.js`: Provides a brief summary of market performance.
+- `SectorPerformance.js`: Displays the performance of different market sectors.
+- `Sidebar.js`: Contains the sidebar navigation with links to different sections.
+- `SPDRChart.js`: Displays an interactive chart for SPDR S&P 500 ETF Trust with different time ranges.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Pages
 
-### Code Splitting
+- `Dashboard.js`: Main dashboard page that combines all the components.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Utils
 
-### Analyzing the Bundle Size
+- `api.js`: Contains the function to fetch market data from the Alpha Vantage API.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Dependencies
 
-### Making a Progressive Web App
+The project uses the following main dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- `react`: JavaScript library for building user interfaces.
+- `framer-motion`: Library for animations.
+- `recharts`: Library for building charts.
+- `axios`: Promise-based HTTP client for making API requests.
+- `moment`: Library for parsing, validating, manipulating, and formatting dates.
 
-### Advanced Configuration
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-### Deployment
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Contributions are welcome! Please open an issue or submit a pull request with your changes.
 
-### `npm run build` fails to minify
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For any questions or feedback, please contact [vsairam88@gmail.com].
