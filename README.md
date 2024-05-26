@@ -1,4 +1,6 @@
 # Stock Dashboard
+![Screenshot 2024-05-26 134611](https://github.com/SaiVenkat07/quabe-stock/assets/125186243/3fe0d4eb-0739-4229-bdae-b3c0a8fe6ce9)
+
 
 This is a React-based stock dashboard application that provides an overview of various market indices, sector performance, and detailed charts for the SPDR S&P 500 ETF Trust. The application uses `framer-motion` for animations, `recharts` for charts, and `axios` to fetch market data from the Alpha Vantage API.
 
